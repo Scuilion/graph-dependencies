@@ -1,4 +1,4 @@
-package com.netflix.assignment;
+package com.scuilion.assignment;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static jdk.internal.dynalink.support.Guards.isNull;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;

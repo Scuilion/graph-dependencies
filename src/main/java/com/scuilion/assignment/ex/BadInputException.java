@@ -1,4 +1,4 @@
-package com.netflix.assignment.ex;
+package com.scuilion.assignment.ex;
 
 import java.io.IOException;
 

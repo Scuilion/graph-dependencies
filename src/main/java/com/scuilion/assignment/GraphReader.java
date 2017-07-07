@@ -1,8 +1,7 @@
-package com.netflix.assignment;
+package com.scuilion.assignment;
 
-import com.netflix.assignment.ex.BadInputException;
+import com.scuilion.assignment.ex.BadInputException;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

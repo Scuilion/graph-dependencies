@@ -1,4 +1,4 @@
-package com.netflix.assignment;
+package com.scuilion.assignment;
 
 import org.jgrapht.DirectedGraph;
 import org.junit.Test;

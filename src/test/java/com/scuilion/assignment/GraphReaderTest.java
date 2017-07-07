@@ -1,6 +1,6 @@
-package com.netflix.assignment;
+package com.scuilion.assignment;
 
-import com.netflix.assignment.ex.BadInputException;
+import com.scuilion.assignment.ex.BadInputException;
 import org.junit.Test;
 
 import java.util.Arrays;

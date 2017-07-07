@@ -5,7 +5,7 @@ repositories {
 }
 
 apply plugin:'application'
-mainClassName = 'com.netflix.assignment.Main'
+mainClassName = 'com.scuilion.assignment.Main'
 
 dependencies {
 

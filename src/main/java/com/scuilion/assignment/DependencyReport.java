@@ -1,13 +1,11 @@
-package com.netflix.assignment;
+package com.scuilion.assignment;
 
-import com.netflix.assignment.ex.BadInputException;
-import org.jgrapht.DirectedGraph;
+import com.scuilion.assignment.ex.BadInputException;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
