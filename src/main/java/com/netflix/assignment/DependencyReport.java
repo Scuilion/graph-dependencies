@@ -33,8 +33,6 @@ public class DependencyReport {
 
     void getLevels(List<String> nodes) {
         if (nodes.size() == 1) {
-//            System.out.print(String.join("", Collections.nCopies(level, " ")));
-//            System.out.println(nodes.get(0));
             printNode(false, level, nodes.get(0));
             ++level;
             getLevels(Graphs.successorListOf(g, nodes.get(0)));
@@ -42,11 +40,8 @@ public class DependencyReport {
             for (String node : nodes) {
                 List<String> eh = Graphs.successorListOf(g, node);
                 if (eh.isEmpty()) {
-//                    atLevel(node);
                     printNode(true, level, node);
                 } else {
-//                    System.out.print(String.join("", Collections.nCopies(level, " ")));
-//                    System.out.println(node);
                     printNode(false, level, node);
                     ++level;
                     getLevels(eh);
