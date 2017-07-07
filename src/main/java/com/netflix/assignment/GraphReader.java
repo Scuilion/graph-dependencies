@@ -2,27 +2,13 @@ package com.netflix.assignment;
 
 import com.netflix.assignment.ex.BadInputException;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 class GraphReader {
-
-    static Map<String, List<String>> parse(final String path) {
-        Map<String, List<String>> adjList;
-        try {
-            final List<String> f = Files.readAllLines(Paths.get(path), Charset.defaultCharset());
-            adjList = parse(f);
-        } catch (IOException e) {
-            throw new BadInputException("Failed to parse file.", e);
-        }
-        return adjList;
-    }
 
     static Map<String, List<String>> parse(final List<String> graphList) {
         final Map<String, List<String>> adjList = new HashMap<>();
@@ -36,6 +22,5 @@ class GraphReader {
             }
         }
         return adjList;
-
     }
 }
