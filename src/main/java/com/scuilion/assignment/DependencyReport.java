@@ -7,17 +7,17 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.List;
-import java.util.Map;
 
 public class DependencyReport {
 
-    private final Map<String, List<String>> adjList;
+    private final GraphReader graphReader = new GraphReader();
+    private final TreeNode dependencyNode;
 
     public DependencyReport(final File file) {
         if (!file.exists()) {
             throw new BadInputException("File does not exist");
         }
-        adjList = GraphReader.parse(readFileLines(file));
+        dependencyNode = graphReader.parse(readFileLines(file));
     }
 
     public DependencyReport(final String filePath) {
@@ -25,7 +25,7 @@ public class DependencyReport {
         if (!f.exists()) {
             throw new BadInputException("File does not exist");
         }
-        adjList = GraphReader.parse(readFileLines(f));
+        dependencyNode = graphReader.parse(readFileLines(f));
     }
 
 
@@ -38,8 +38,6 @@ public class DependencyReport {
     }
 
     public void print() {
-        final DependencyGraph dg = new DependencyGraph();
-        dg.createGraph(adjList);
-        dg.printGraph();
+        ConsoleWriter.write(dependencyNode);
     }
 }

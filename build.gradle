@@ -9,8 +9,6 @@ mainClassName = 'com.scuilion.assignment.Main'
 
 dependencies {
 
-    compile 'org.jgrapht:jgrapht-core:1.0.1'
-
     testCompile 'junit:junit:4.12'
     testCompile 'commons-io:commons-io:2.5'
     testCompile 'org.hamcrest:hamcrest-all:1.3'
