@@ -42,6 +42,6 @@ public class DependencyReport {
     public void print() {
         final DependencyGraph dg = new DependencyGraph();
         dg.createGraph(adjList);
-        dg.getLevels(Arrays.asList("A"));
+        dg.printGraph();
     }
 }

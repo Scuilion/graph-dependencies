@@ -43,6 +43,25 @@ public class DependencyGraphTest {
     }
 
     @Test
+    public void moreLevelTest() {
+        final Map<String, List<String>> adjList = new HashMap<>();
+        adjList.put("A", Arrays.asList("B", "J"));
+        adjList.put("B", Arrays.asList("C", "D"));
+//        adjList.put("C", Arrays.asList("E"));
+//        adjList.put("F", Arrays.asList("H"));
+
+        adjList.put("D", Arrays.asList("F", "G", "J"));
+        adjList.put("J", Arrays.asList("I", "Q"));
+
+        final DependencyGraph dependencyGraph = new DependencyGraph();
+        dependencyGraph.createGraph(adjList);
+
+        dependencyGraph.getLevels(Arrays.asList("A"));
+
+        assertTrue(true);
+    }
+
+    @Test
     public void testLevelCreation() {
         final Map<String, List<String>> adjList = new HashMap<>();
         adjList.put("A", Arrays.asList("B", "C"));

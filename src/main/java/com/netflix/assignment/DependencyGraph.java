@@ -2,11 +2,14 @@ package com.netflix.assignment;
 
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.Graphs;
+import org.jgrapht.alg.CycleDetector;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
+import org.jgrapht.traverse.TopologicalOrderIterator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -85,5 +88,11 @@ public class DependencyGraph {
         }
     }
 
+    void printGraph() {
+        final TopologicalOrderIterator<String, String> orderIterator =
+            new TopologicalOrderIterator<>(g);
+        final String topV = orderIterator.next();
+        this.getLevels(Collections.singletonList(topV));
+    }
 
 }

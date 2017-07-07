@@ -17,7 +17,6 @@ J->I
 J->Q
 K->N
 K->L
-L->I
 M->N
 M->H
 O->P
