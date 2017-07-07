@@ -18,8 +18,8 @@ dependencies {
 
 run {
     println project.hasProperty("graph")
-    if (System.hasProperty("graph")) {
-        args System.getProperty("graph").split()
+    if (project.hasProperty("graph")) {
+        args project.getProperty("graph")
     }
 }
 
